@@ -8,7 +8,7 @@ resource "tfe_variable_set" "main" {
 
 # see https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace_variable_set
 resource "tfe_workspace_variable_set" "main" {
-  for_each = var.workspace_ids
+  for_each = toset(var.workspace_ids)
 
   variable_set_id = tfe_variable_set.main.id
   workspace_id    = each.key
