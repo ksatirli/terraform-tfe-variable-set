@@ -1,27 +1,27 @@
 variable "name" {
-  type = string
+  type        = string
   description = "Name of the variable set."
 }
 
 variable "description" {
-  type = string
+  type        = string
   description = "Description of the variable set."
 }
 
 variable "global" {
-  type = bool
+  type        = bool
   description = "Toggle to make Variable Set available to all Workspaces in the Organization."
-  default = false
+  default     = false
 }
 
 variable "organization" {
-  type = string
+  type        = string
   description = "Name of the organization."
 }
 
-variable "workspace_id" {
-  type = string
-  description = "Workspace ID to add the Variable Set to."
+variable "workspace_ids" {
+  type        = list(string)
+  description = "List of Workspace IDs to add the Variable Set to."
 }
 
 variable "variables" {
