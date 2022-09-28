@@ -7,5 +7,9 @@
 
 ### Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| tfe_variable | Exported Attributes for `tfe_variable`. |
+| tfe_variable_set | Exported Attributes for `tfe_variable_set`. |
+| tfe_workspace_variable_set | Exported Attributes for `tfe_workspace_variable_set`. |
 <!-- END_TF_DOCS -->

@@ -6,9 +6,9 @@ module "hcp_credentials" {
   organization = "a-demo-organization"
 
   workspace_ids = [
-    "hcp-consul",
-    "hcp-packer",
-    "hcp-vault",
+    data.tfe_workspace.hcp_consul.id,
+    data.tfe_workspace.hcp_packer.id,
+    data.tfe_workspace.hcp_vault.id,
   ]
 
   variables = var.variables
