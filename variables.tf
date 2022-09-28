@@ -10,7 +10,7 @@ variable "description" {
 
 variable "global" {
   type        = bool
-  description = "Toggle to make Variable Set available to all Workspaces in the Organization."
+  description = "Toggle to make Variable Set available to all Workspaces in the Organization. Conflicts with `var.workspace_ids`."
   default     = false
 }
 
