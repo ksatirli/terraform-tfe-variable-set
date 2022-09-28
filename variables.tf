@@ -22,6 +22,7 @@ variable "organization" {
 variable "workspace_ids" {
   type        = list(string)
   description = "List of Workspace IDs to add the Variable Set to."
+  default     = []
 }
 
 variable "variables" {
