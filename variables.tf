@@ -31,7 +31,7 @@ variable "variables" {
     value       = string
     category    = string
     description = string
-    sensitive   = bool # TODO: mark as optional after 1.3 release
+    sensitive   = optional(bool)
   }))
 
   description = "List of Objects containing Variable definitions."

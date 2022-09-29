@@ -3,16 +3,16 @@ data "tfe_workspace" "main" {
   organization = "a-demo-organization"
 }
 
-module "variables" {
+module "sensitive_variables" {
   source = "../.."
 
-  name         = "variables"
-  description  = "Variables Example."
+  name         = "sensitive-variables"
+  description  = "Sensitive Variables Example."
   organization = data.tfe_workspace.main.organization
 
   workspace_ids = [
     data.tfe_workspace.main.id
   ]
 
-  variables = var.variables
+  variables = var.sensitive_variables
 }
