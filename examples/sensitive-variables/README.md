@@ -1,3 +1,7 @@
+# Example: `sensitive-variables`
+
+This is a _sensitive-variables_ example of the `terraform-tfe-variable-set` module.
+
 <!-- BEGIN_TF_DOCS -->
 ### Inputs
 

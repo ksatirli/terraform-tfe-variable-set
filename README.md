@@ -16,7 +16,7 @@ This Terraform Module manages the lifecycle of [Terraform Cloud Variable Sets](h
 ## Requirements
 
 * Terraform Cloud [Account](https://app.terraform.io/session)
-* Terraform `1.2.x` or newer.
+* Terraform `1.3.x` or newer.
 
 ## Usage
 
