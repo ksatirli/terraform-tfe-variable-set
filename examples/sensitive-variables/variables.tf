@@ -1,10 +1,10 @@
-variable "variables" {
+variable "sensitive_variables" {
   type = list(object({
     key         = string
     value       = string
     category    = string
     description = string
-    sensitive   = bool
+    sensitive   = optional(bool)
   }))
 
   description = "List of Objects containing Variable definitions."
