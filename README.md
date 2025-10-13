@@ -30,7 +30,7 @@ For examples, see the [./examples](https://github.com/ksatirli/terraform-tfe-var
 | description | Description of the variable set. | `string` | n/a | yes |
 | name | Name of the variable set. | `string` | n/a | yes |
 | organization | Name of the organization. | `string` | n/a | yes |
-| variables | List of Objects containing Variable definitions. | <pre>list(object({<br/>    key         = string<br/>    value       = string<br/>    category    = string<br/>    description = string<br/>    sensitive   = optional(bool)<br/>  }))</pre> | n/a | yes |
+| variables | List of Objects containing Variable definitions. | <pre>list(object({<br>    key         = string<br>    value       = string<br>    category    = string<br>    description = string<br>    sensitive   = optional(bool)<br>  }))</pre> | n/a | yes |
 | global | Toggle to make Variable Set available to all Workspaces in the Organization. Conflicts with `var.workspace_ids`. | `bool` | `false` | no |
 | priority | Toggle to make Variable Set take Priority over Workspace-specific Variables. Conflicts with `var.workspace_ids`. | `bool` | `false` | no |
 | workspace_ids | List of Workspace IDs to add the Variable Set to. | `list(string)` | `[]` | no |
