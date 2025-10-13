@@ -15,7 +15,7 @@ This Terraform Module manages the lifecycle of [Terraform Enterprise Variable Se
 
 ## Requirements
 
-* Terraform Enterprice _or_ HCP Terraform [Account](https://app.terraform.io/session)
+* Terraform Enterprise _or_ HCP Terraform [Account](https://app.terraform.io/session)
 * Terraform `1.3.x` or newer.
 
 ## Usage
