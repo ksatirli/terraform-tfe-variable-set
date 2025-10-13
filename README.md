@@ -1,11 +1,11 @@
-# Terraform Cloud: Variable Set
+# Terraform Enterprise: Variable Set
 
-This Terraform Module manages the lifecycle of [Terraform Cloud Variable Sets](https://www.terraform.io/cloud-docs/api-docs/variable-sets).
+This Terraform Module manages the lifecycle of [Terraform Enterprise Variable Sets](https://developer.hashicorp.com/terraform/cloud-docs/api-docs/variable-sets).
 
 ## Table of Contents
 
 <!-- TOC -->
-* [Terraform Cloud: Variable Set](#terraform-cloud--variable-set)
+* [Terraform Enterprise: Variable Set](#terraform-enterprise--variable-set)
   * [Table of Contents](#table-of-contents)
   * [Requirements](#requirements)
   * [Usage](#usage)
@@ -15,7 +15,7 @@ This Terraform Module manages the lifecycle of [Terraform Cloud Variable Sets](h
 
 ## Requirements
 
-* Terraform Cloud [Account](https://app.terraform.io/session)
+* Terraform Enterprice _or_ HCP Terraform [Account](https://app.terraform.io/session)
 * Terraform `1.3.x` or newer.
 
 ## Usage

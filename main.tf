@@ -16,7 +16,7 @@ resource "tfe_workspace_variable_set" "main" {
 
 # see https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable
 resource "tfe_variable" "main" {
-  # see https://www.terraform.io/docs/language/meta-arguments/for_each.html
+  # see https://developer.hashicorp.com/terraform/language/meta-arguments
   for_each = {
     for item in var.variables :
     item.key => item

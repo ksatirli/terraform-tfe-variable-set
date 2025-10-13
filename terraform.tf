@@ -1,5 +1,5 @@
 terraform {
-  # see https://www.terraform.io/docs/language/settings/index.html#specifying-provider-requirements
+  # see https://developer.hashicorp.com/terraform/language/block/terraform#specifying-provider-requirements
   required_providers {
     # see https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/
     tfe = {
