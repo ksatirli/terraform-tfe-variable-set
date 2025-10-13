@@ -3,6 +3,7 @@ resource "tfe_variable_set" "main" {
   name         = var.name
   description  = var.description
   global       = var.global
+  priority     = var.priority
   organization = var.organization
 }
 

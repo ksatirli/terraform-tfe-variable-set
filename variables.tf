@@ -19,6 +19,12 @@ variable "organization" {
   description = "Name of the organization."
 }
 
+variable "priority" {
+  type        = bool
+  description = "Toggle to make Variable Set take Priority over Workspace-specific Variables. Conflicts with `var.workspace_ids`."
+  default     = false
+}
+
 variable "workspace_ids" {
   type        = list(string)
   description = "List of Workspace IDs to add the Variable Set to."
