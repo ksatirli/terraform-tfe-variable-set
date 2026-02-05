@@ -3,7 +3,16 @@ resource "tfe_variable_set" "main" {
   name         = var.name
   description  = var.description
   global       = var.global
+  priority     = var.priority
   organization = var.organization
+
+  lifecycle {
+    # see https://developer.hashicorp.com/terraform/tutorials/configuration-language/custom-conditions#add-preconditions
+    precondition {
+      condition     = !var.priority || length(var.workspace_ids) == 0
+      error_message = "Unable to set both `priority` and `workspace_ids` as they are mutually exclusive."
+    }
+  }
 }
 
 # see https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace_variable_set
@@ -16,7 +25,7 @@ resource "tfe_workspace_variable_set" "main" {
 
 # see https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable
 resource "tfe_variable" "main" {
-  # see https://www.terraform.io/docs/language/meta-arguments/for_each.html
+  # see https://developer.hashicorp.com/terraform/language/meta-arguments
   for_each = {
     for item in var.variables :
     item.key => item

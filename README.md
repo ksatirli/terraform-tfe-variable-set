@@ -1,11 +1,11 @@
-# Terraform Cloud: Variable Set
+# Terraform Enterprise: Variable Set
 
-This Terraform Module manages the lifecycle of [Terraform Cloud Variable Sets](https://www.terraform.io/cloud-docs/api-docs/variable-sets).
+This Terraform Module manages the lifecycle of [Terraform Enterprise Variable Sets](https://developer.hashicorp.com/terraform/cloud-docs/api-docs/variable-sets).
 
 ## Table of Contents
 
 <!-- TOC -->
-* [Terraform Cloud: Variable Set](#terraform-cloud--variable-set)
+* [Terraform Enterprise: Variable Set](#terraform-enterprise--variable-set)
   * [Table of Contents](#table-of-contents)
   * [Requirements](#requirements)
   * [Usage](#usage)
@@ -15,7 +15,7 @@ This Terraform Module manages the lifecycle of [Terraform Cloud Variable Sets](h
 
 ## Requirements
 
-* Terraform Cloud [Account](https://app.terraform.io/session)
+* Terraform Enterprise _or_ HCP Terraform [Account](https://app.terraform.io/session)
 * Terraform `1.3.x` or newer.
 
 ## Usage
@@ -32,6 +32,7 @@ For examples, see the [./examples](https://github.com/ksatirli/terraform-tfe-var
 | organization | Name of the organization. | `string` | n/a | yes |
 | variables | List of Objects containing Variable definitions. | <pre>list(object({<br>    key         = string<br>    value       = string<br>    category    = string<br>    description = string<br>    sensitive   = optional(bool)<br>  }))</pre> | n/a | yes |
 | global | Toggle to make Variable Set available to all Workspaces in the Organization. Conflicts with `var.workspace_ids`. | `bool` | `false` | no |
+| priority | Toggle to make Variable Set take Priority over Workspace-specific Variables. Conflicts with `var.workspace_ids`. | `bool` | `false` | no |
 | workspace_ids | List of Workspace IDs to add the Variable Set to. | `list(string)` | `[]` | no |
 
 ### Outputs
