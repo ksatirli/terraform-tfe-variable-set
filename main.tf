@@ -1,4 +1,4 @@
-# see https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable_set
+# see https://registry.terraform.io/providers/hashicorp/tfe/0.80.0/docs/resources/variable_set
 resource "tfe_variable_set" "main" {
   name         = var.name
   description  = var.description
@@ -15,7 +15,7 @@ resource "tfe_variable_set" "main" {
   }
 }
 
-# see https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace_variable_set
+# see https://registry.terraform.io/providers/hashicorp/tfe/0.80.0/docs/resources/workspace_variable_set
 resource "tfe_workspace_variable_set" "main" {
   for_each = toset(var.workspace_ids)
 
@@ -23,7 +23,7 @@ resource "tfe_workspace_variable_set" "main" {
   workspace_id    = each.key
 }
 
-# see https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable
+# see https://registry.terraform.io/providers/hashicorp/tfe/0.80.0/docs/resources/variable
 resource "tfe_variable" "main" {
   # see https://developer.hashicorp.com/terraform/language/meta-arguments
   for_each = {
